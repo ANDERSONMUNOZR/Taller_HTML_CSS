@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de estudiante</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Registro de estudiante</h1>
+    <a href="index.html">Volver al inicio</a>
+
+    <form action="#">
+        <fieldset>
+            <legend>Datos personales</legend>
+
+            <input type="hidden" name="codigo_registro" value="1">
+
+            <label for="codigo">Codigo de estudiante:</label>
+            <input type="text" id="codigo" name="codigo" value="EST001" readonly>
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" minlength="3" maxlength="20" required>
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" minlength="3" maxlength="20" required>
+
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" min="1" max="100" required>
+
+            <label for="fecha">Fecha de nacimiento:</label>
+            <input type="date" id="fecha" name="fecha">
+
+            <label for="hora">Hora:</label>
+            <input type="time" id="hora" name="hora">
+
+            <p>Genero:</p>
+            <label><input type="radio" name="genero" value="hombre"> Hombre</label>
+            <label><input type="radio" name="genero" value="mujer"> Mujer</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Datos de contacto</legend>
+
+            <label for="correo">Correo:</label>
+            <input type="email" id="correo" name="correo">
+
+            <label for="telefono">Telefono:</label>
+            <input type="tel" id="telefono" name="telefono">
+
+            <label for="direccion">Direccion:</label>
+            <textarea id="direccion" name="direccion" rows="3" cols="25"></textarea>
+
+            <label for="ciudad">Ciudad:</label>
+            <select id="ciudad" name="ciudad">
+                <option value="">Seleccione</option>
+                <option value="guayaquil">Guayaquil</option>
+                <option value="quito">Quito</option>
+                <option value="cuenca">Cuenca</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Informacion adicional</legend>
+
+            <p>Servicios de interes:</p>
+            <label><input type="checkbox" name="servicios" value="mantenimiento"> Mantenimiento</label>
+            <label><input type="checkbox" name="servicios" value="reparacion"> Reparacion</label>
+            <label><input type="checkbox" name="servicios" value="soporte"> Soporte tecnico</label>
+
+            <label for="foto">Foto del estudiante:</label>
+            <input type="file" id="foto" name="foto" accept="image/*">
+        </fieldset>
+
+        <button type="submit">Guardar</button>
+    </form>
+</body>
+</html>
